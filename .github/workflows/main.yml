@@ -22,16 +22,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore "./YourProjectName.csproj"
-
-      - name: Build project
-        run: dotnet build "./YourProjectName.csproj" --configuration Release
-
-      - name: Run application
-        run: dotnet run --project "./YourProjectName.csproj"
+        run: dotnet restore
 
       - name: Build project
         run: dotnet build --configuration Release
 
       - name: Run application
-        run: dotnet run
+        run: dotnet run --configuration Release
